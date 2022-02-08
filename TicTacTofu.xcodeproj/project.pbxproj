@@ -7,6 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		037147EB27B250230038C28F /* ParticlesEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037147EA27B250230038C28F /* ParticlesEmitter.swift */; };
+		037147EC27B250230038C28F /* ParticlesEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037147EA27B250230038C28F /* ParticlesEmitter.swift */; };
+		037147EE27B25E300038C28F /* WinnerParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037147ED27B25E300038C28F /* WinnerParty.swift */; };
+		037147EF27B25E300038C28F /* WinnerParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037147ED27B25E300038C28F /* WinnerParty.swift */; };
+		037147F127B25E480038C28F /* PlayerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037147F027B25E480038C28F /* PlayerImage.swift */; };
+		037147F227B25E480038C28F /* PlayerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037147F027B25E480038C28F /* PlayerImage.swift */; };
+		037147F427B25E5A0038C28F /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037147F327B25E5A0038C28F /* TileView.swift */; };
+		037147F527B25E5A0038C28F /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037147F327B25E5A0038C28F /* TileView.swift */; };
+		037147F727B25EA30038C28F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037147F627B25EA30038C28F /* GameView.swift */; };
+		037147F827B25EA30038C28F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037147F627B25EA30038C28F /* GameView.swift */; };
+		037147FA27B25ECA0038C28F /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037147F927B25ECA0038C28F /* OptionsView.swift */; };
+		037147FB27B25ECA0038C28F /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037147F927B25ECA0038C28F /* OptionsView.swift */; };
+		037147FD27B25EE70038C28F /* PrologueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037147FC27B25EE70038C28F /* PrologueView.swift */; };
+		037147FE27B25EE70038C28F /* PrologueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037147FC27B25EE70038C28F /* PrologueView.swift */; };
+		0371480027B25F380038C28F /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037147FF27B25F380038C28F /* Row.swift */; };
+		0371480127B25F380038C28F /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037147FF27B25F380038C28F /* Row.swift */; };
+		0371480327B25F4C0038C28F /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371480227B25F4C0038C28F /* Board.swift */; };
+		0371480427B25F4C0038C28F /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371480227B25F4C0038C28F /* Board.swift */; };
+		0371480627B25F850038C28F /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371480527B25F850038C28F /* Tile.swift */; };
+		0371480727B25F850038C28F /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371480527B25F850038C28F /* Tile.swift */; };
+		0371480927B25F900038C28F /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371480827B25F900038C28F /* Position.swift */; };
+		0371480A27B25F900038C28F /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371480827B25F900038C28F /* Position.swift */; };
+		0371480C27B25F9F0038C28F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371480B27B25F9F0038C28F /* Player.swift */; };
+		0371480D27B25F9F0038C28F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371480B27B25F9F0038C28F /* Player.swift */; };
+		0371480F27B25FB20038C28F /* GamePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371480E27B25FB20038C28F /* GamePlayer.swift */; };
+		0371481027B25FB20038C28F /* GamePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371480E27B25FB20038C28F /* GamePlayer.swift */; };
+		0371481227B25FBF0038C28F /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371481127B25FBF0038C28F /* Move.swift */; };
+		0371481327B25FBF0038C28F /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371481127B25FBF0038C28F /* Move.swift */; };
+		0371481527B25FD00038C28F /* GameOutcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371481427B25FD00038C28F /* GameOutcome.swift */; };
+		0371481627B25FD00038C28F /* GameOutcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371481427B25FD00038C28F /* GameOutcome.swift */; };
+		0371481827B25FDD0038C28F /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371481727B25FDD0038C28F /* GameState.swift */; };
+		0371481927B25FDD0038C28F /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371481727B25FDD0038C28F /* GameState.swift */; };
 		03A12CC027AF47F30090C2E8 /* TicTacTofuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A12CB027AF47F20090C2E8 /* TicTacTofuApp.swift */; };
 		03A12CC127AF47F30090C2E8 /* TicTacTofuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A12CB027AF47F20090C2E8 /* TicTacTofuApp.swift */; };
 		03A12CC227AF47F30090C2E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A12CB127AF47F20090C2E8 /* ContentView.swift */; };
@@ -16,6 +48,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		037147EA27B250230038C28F /* ParticlesEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticlesEmitter.swift; sourceTree = "<group>"; };
+		037147ED27B25E300038C28F /* WinnerParty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerParty.swift; sourceTree = "<group>"; };
+		037147F027B25E480038C28F /* PlayerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerImage.swift; sourceTree = "<group>"; };
+		037147F327B25E5A0038C28F /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		037147F627B25EA30038C28F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		037147F927B25ECA0038C28F /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		037147FC27B25EE70038C28F /* PrologueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrologueView.swift; sourceTree = "<group>"; };
+		037147FF27B25F380038C28F /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		0371480227B25F4C0038C28F /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		0371480527B25F850038C28F /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		0371480827B25F900038C28F /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		0371480B27B25F9F0038C28F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		0371480E27B25FB20038C28F /* GamePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayer.swift; sourceTree = "<group>"; };
+		0371481127B25FBF0038C28F /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		0371481427B25FD00038C28F /* GameOutcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOutcome.swift; sourceTree = "<group>"; };
+		0371481727B25FDD0038C28F /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		03A12CB027AF47F20090C2E8 /* TicTacTofuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacTofuApp.swift; sourceTree = "<group>"; };
 		03A12CB127AF47F20090C2E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		03A12CB227AF47F30090C2E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,8 +102,24 @@
 		03A12CAF27AF47F20090C2E8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0371480827B25F900038C28F /* Position.swift */,
+				0371480527B25F850038C28F /* Tile.swift */,
+				037147FF27B25F380038C28F /* Row.swift */,
+				037147F627B25EA30038C28F /* GameView.swift */,
 				03A12CB027AF47F20090C2E8 /* TicTacTofuApp.swift */,
 				03A12CB127AF47F20090C2E8 /* ContentView.swift */,
+				0371481727B25FDD0038C28F /* GameState.swift */,
+				0371481427B25FD00038C28F /* GameOutcome.swift */,
+				0371481127B25FBF0038C28F /* Move.swift */,
+				0371480E27B25FB20038C28F /* GamePlayer.swift */,
+				0371480B27B25F9F0038C28F /* Player.swift */,
+				0371480227B25F4C0038C28F /* Board.swift */,
+				037147FC27B25EE70038C28F /* PrologueView.swift */,
+				037147F927B25ECA0038C28F /* OptionsView.swift */,
+				037147F327B25E5A0038C28F /* TileView.swift */,
+				037147F027B25E480038C28F /* PlayerImage.swift */,
+				037147ED27B25E300038C28F /* WinnerParty.swift */,
+				037147EA27B250230038C28F /* ParticlesEmitter.swift */,
 				03A12CB227AF47F30090C2E8 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -177,7 +241,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				03A12CC227AF47F30090C2E8 /* ContentView.swift in Sources */,
+				037147FD27B25EE70038C28F /* PrologueView.swift in Sources */,
+				0371480F27B25FB20038C28F /* GamePlayer.swift in Sources */,
+				037147EE27B25E300038C28F /* WinnerParty.swift in Sources */,
+				0371480627B25F850038C28F /* Tile.swift in Sources */,
 				03A12CC027AF47F30090C2E8 /* TicTacTofuApp.swift in Sources */,
+				0371480327B25F4C0038C28F /* Board.swift in Sources */,
+				037147FA27B25ECA0038C28F /* OptionsView.swift in Sources */,
+				0371480927B25F900038C28F /* Position.swift in Sources */,
+				0371481527B25FD00038C28F /* GameOutcome.swift in Sources */,
+				037147EB27B250230038C28F /* ParticlesEmitter.swift in Sources */,
+				0371480C27B25F9F0038C28F /* Player.swift in Sources */,
+				037147F427B25E5A0038C28F /* TileView.swift in Sources */,
+				0371481227B25FBF0038C28F /* Move.swift in Sources */,
+				037147F127B25E480038C28F /* PlayerImage.swift in Sources */,
+				0371481827B25FDD0038C28F /* GameState.swift in Sources */,
+				0371480027B25F380038C28F /* Row.swift in Sources */,
+				037147F727B25EA30038C28F /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +266,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				03A12CC327AF47F30090C2E8 /* ContentView.swift in Sources */,
+				037147FE27B25EE70038C28F /* PrologueView.swift in Sources */,
+				0371481027B25FB20038C28F /* GamePlayer.swift in Sources */,
+				037147EF27B25E300038C28F /* WinnerParty.swift in Sources */,
+				0371480727B25F850038C28F /* Tile.swift in Sources */,
 				03A12CC127AF47F30090C2E8 /* TicTacTofuApp.swift in Sources */,
+				0371480427B25F4C0038C28F /* Board.swift in Sources */,
+				037147FB27B25ECA0038C28F /* OptionsView.swift in Sources */,
+				0371480A27B25F900038C28F /* Position.swift in Sources */,
+				0371481627B25FD00038C28F /* GameOutcome.swift in Sources */,
+				037147EC27B250230038C28F /* ParticlesEmitter.swift in Sources */,
+				0371480D27B25F9F0038C28F /* Player.swift in Sources */,
+				037147F527B25E5A0038C28F /* TileView.swift in Sources */,
+				0371481327B25FBF0038C28F /* Move.swift in Sources */,
+				037147F227B25E480038C28F /* PlayerImage.swift in Sources */,
+				0371481927B25FDD0038C28F /* GameState.swift in Sources */,
+				0371480127B25F380038C28F /* Row.swift in Sources */,
+				037147F827B25EA30038C28F /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
