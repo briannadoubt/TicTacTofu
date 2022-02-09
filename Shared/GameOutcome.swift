@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum GameOutcome {
+enum GameOutcome: Equatable {
     case winner(_ player: Player)
     case tie
 }
