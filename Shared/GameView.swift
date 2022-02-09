@@ -13,103 +13,34 @@ struct GameView: View {
     init(playingAs: Player, boardSize: Int) {
         self.boardSize = boardSize
         self.playingAs = playingAs
-        
-        _board = ObservedObject(initialValue: Board(initialPlayer: playingAs, size: boardSize))
-        
-        strategist = GKMinmaxStrategist()
-        strategist.maxLookAheadDepth = 10
-        strategist.randomSource = GKARC4RandomSource()
+        _board = StateObject(wrappedValue: Board(initialPlayer: playingAs, size: boardSize))
     }
     
     let boardSize: Int
-    let cellSize: CGFloat = 64
     let playingAs: Player
     
-    @ObservedObject var board: Board
-    
-    @State var error: Error?
-    @State var errorIsPresented = false
-    
-    @State var outcomeAlertIsPresented = false
-    
-    var strategist: GKMinmaxStrategist
-    
-    @Environment(\.presentationMode) var presentationMode
-    
-    func makeMove(on tile: Tile) {
-        let newMove = Move(position: tile.position, player: board.currentPlayer)
-        board.make(newMove)
-        checkForWinner()
-        board.currentPlayer = board.currentPlayer.opponent
-    }
-
-    func makeComputerMove() {
-        if let bestMove = strategist.bestMoveForActivePlayer() as? Move { // As mentioned in the docs, "This method returns nil if the current player is invalid or has no available moves"
-            board.make(bestMove)
-        } else if let randomPosition = board.emptyTiles.randomElement()?.position {
-            let randomMove = Move(position: randomPosition, player: board.currentPlayer)
-            board.make(randomMove)
-        }
-        checkForWinner()
-        board.currentPlayer = board.currentPlayer.opponent
-    }
-    
-    func checkForWinner() {
-        if board.isWin(for: board.currentPlayer) {
-            board.state = .end(.winner(board.currentPlayer.player))
-        }
-        if board.isFull(boardSize) {
-            board.state = .end(.tie)
-        }
-    }
+    @StateObject var board: Board
     
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                WinnerParty(geometry: geometry, state: board.state)
-                VStack {
-                    switch board.state {
-                    case .playing:
-                        ScrollView([.vertical, .horizontal], showsIndicators: true) {
-                            if board.state.id == GameState.playing.id {
-                                VStack {
-                                    ForEach(board.rows) { row in
-                                        HStack {
-                                            ForEach(row) { tile in
-                                                TileView(tile: tile) {
-                                                    makeMove(on: tile)
-                                                }
-                                                .frame(width: cellSize, height: cellSize)
-                                                .cornerRadius(20)
-                                            }
-                                        }
-                                    }
-                                }
-                                .padding()
-                            }
-                        }
-                    case .end(let outcome):
-                        VStack {
-                            switch outcome {
-                            case .winner(let winner):
-                                Text(winner.label + " wins!")
-                                    .padding()
-                            case .tie:
-                                Text("Tie game!")
-                                    .padding()
-                            }
-                            Button("Play Again") {
-                                board.reset()
-                            }
-                            .font(.headline.bold())
-                            .padding()
-                        }
-                        .font(.largeTitle.bold())
-                        .background(.ultraThinMaterial)
-                        .cornerRadius(20)
-                    }
+                switch board.state {
+                case .playing:
+                    // Game Board
+                    GameBoardView(boardSize: boardSize)
+                        .environmentObject(board)
+                    
+                case .end(let outcome):
+                    WinnerParty(geometry: geometry, outcome: outcome)
+                    GameOutcomeView(outcome: outcome)
+                        .environmentObject(board)
                 }
             }
+        }
+        .background {
+            Image("background")
+                .resizable(resizingMode: .tile)
+                .ignoresSafeArea()
         }
         .navigationTitle("Tic-Tacs & Tofu")
         .toolbar {
@@ -123,10 +54,8 @@ struct GameView: View {
                 }
             }
         }
-        .onReceive(board.$currentPlayer) { currentPlayer in
-            if currentPlayer.player == board.computerPlayer {
-                makeComputerMove()
-            }
+        .onDisappear {
+            board.reset()
         }
     }
 }
