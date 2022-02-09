@@ -30,7 +30,6 @@ struct PrologueView: View {
                 NavigationLink("On to the game!") {
                     OptionsView()
                 }
-                .foregroundColor(.accentColor)
             }
         }
         .navigationTitle("Prologue")
