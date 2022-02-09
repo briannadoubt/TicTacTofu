@@ -7,8 +7,11 @@
 
 import Foundation
 
-public struct Tile: Identifiable {
+public class Tile: Identifiable, ObservableObject {
+    init(position: Position) {
+        self.position = position
+    }
     public var id: UUID { UUID() }
-    var player: Player?
+    @Published var player: Player?
     var position: Position
 }

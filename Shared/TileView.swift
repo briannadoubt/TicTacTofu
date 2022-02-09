@@ -9,8 +9,10 @@ import SwiftUI
 
 struct TileView: View {
     
+    @EnvironmentObject var board: Board
+    
     let size: CGFloat = 64
-    let tile: Tile
+    @StateObject var tile: Tile
     
     var makeMove: () -> ()
     
@@ -20,12 +22,16 @@ struct TileView: View {
                 PlayerImage(player: player)
             } else {
                 Button {
-                    makeMove()
+                    withAnimation(.spring()) {
+                        makeMove()
+                    }
                 } label: {
                     Image("card")
                         .resizable()
                         .scaledToFill()
                 }
+                .disabled(board.currentPlayer.player == board.computerPlayer)
+                .transition(.scale)
             }
         }
         .animation(.spring(), value: tile.player == nil)
@@ -35,7 +41,7 @@ struct TileView: View {
 
 struct TileView_Previews: PreviewProvider {
     static var previews: some View {
-        TileView(tile: Tile(player: .tictacs, position: Position())) {
+        TileView(tile: Tile(position: Position())) {
             
         }
     }

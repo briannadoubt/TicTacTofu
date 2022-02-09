@@ -35,25 +35,25 @@ struct GameBoardView: View {
     }
 
     /// Determine the best next move for the computer to play, then play it.
-    ///
-    /// This function performs the following:
-    /// 1. If bestMoveForActivePlayer returns nil but there are still valid spots to play on the board, then something is wrong... so pick a random open tile on the board and make a move there.
-    /// 2. Check if there is an and of game with new board.
-    /// 3. If game continues, change players to opponent.
     func makeComputerMove() {
-        withAnimation(.spring()) {
-            // 1
-            if let bestMove = strategist.bestMoveForActivePlayer() as? Move { // As mentioned in the docs, "This method returns nil if the current player is invalid or has no available moves"... There must be something wrong with my implementation.
+        Task {
+            if let bestMove = strategist.bestMoveForActivePlayer() as? Move {
                 board.make(bestMove)
             } else if let randomPosition = board.emptyTiles.randomElement()?.position {
+                // As mentioned in the docs, "This method returns nil if the current player is invalid or has no available moves"... There must be something wrong with my implementation.
+                // If bestMoveForActivePlayer returns nil but there are still valid spots to play on the board, pick a random open tile on the board and make a move there.
                 let randomMove = Move(position: randomPosition, player: board.currentPlayer)
                 board.make(randomMove)
             }
+            checkForEndOfGame()
+            switchPlayers()
         }
-        // 2
-        checkForEndOfGame()
-        // 3
-        board.currentPlayer = board.currentPlayer.opponent
+    }
+    
+    func switchPlayers() {
+        withAnimation {
+            board.currentPlayer = board.currentPlayer.opponent
+        }
     }
     
     /// Check if the current player has won, then check for a tie.

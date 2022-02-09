@@ -70,7 +70,7 @@ class Board: NSObject, GKGameModel, ObservableObject {
         for row in 0..<size {
             rows.append([])
             for column in 0..<size {
-                rows[row].append(Tile(player: nil, position: Position(row: row, column: column)))
+                rows[row].append(Tile(position: Position(row: row, column: column)))
             }
         }
         self.rows = rows
@@ -138,7 +138,9 @@ class Board: NSObject, GKGameModel, ObservableObject {
     
     /// Modify the `rows` with the given move's position
     func make(_ move: Move) {
-        rows[move.position.row][move.position.column].player = currentPlayer.player
+        withAnimation(.spring()) {
+            rows[move.position.row][move.position.column].player = currentPlayer.player
+        }
     }
     
     /// Conform to NSCopy for the recursion memory mapping
