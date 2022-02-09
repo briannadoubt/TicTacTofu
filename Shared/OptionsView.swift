@@ -15,8 +15,10 @@ struct OptionsView: View {
     @State var playingAs = Player.tofu
     
     var body: some View {
-        let startButton = NavigationLink("Start!") {
-            GameView(playingAs: playingAs, boardSize: boardSize)
+        let gameView = GameView(playingAs: playingAs, boardSize: boardSize)
+        
+        let startButton = NavigationLink("Start!", isActive: $isShowingGame) {
+            gameView
         }
 
         Form {
@@ -65,6 +67,11 @@ struct OptionsView: View {
                 startButton
             }
         }
+        .onChange(of: isShowingGame, perform: { isNowShowingGame in
+            if isNowShowingGame == false {
+                gameView.board.reset()
+            }
+        })
         .navigationTitle("Options")
         .toolbar {
             ToolbarItem {
