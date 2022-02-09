@@ -15,17 +15,21 @@ struct TileView: View {
     var makeMove: () -> ()
     
     var body: some View {
-        Group {
+        ZStack {
             if let player = tile.player {
                 PlayerImage(player: player)
             } else {
                 Button {
                     makeMove()
                 } label: {
-                    Color(.gray)
+                    Image("card")
+                        .resizable()
+                        .scaledToFill()
                 }
             }
         }
+        .animation(.spring(), value: tile.player == nil)
+        .rotation3DEffect(tile.player == nil ? Angle(degrees: 180) : Angle(degrees: 0), axis: (x: CGFloat(0), y: CGFloat(1), z: CGFloat(0)))
     }
 }
 
