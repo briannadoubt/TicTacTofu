@@ -24,7 +24,7 @@ struct ContentView: View {
                 }
                 Section {
                     NavigationLink("Anyways...") {
-                        
+                        PrologueView()
                     }
                     .foregroundColor(.accentColor)
                 }

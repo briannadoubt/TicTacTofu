@@ -102,19 +102,19 @@
 		03A12CAF27AF47F20090C2E8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				03A12CB127AF47F20090C2E8 /* ContentView.swift */,
+				037147FC27B25EE70038C28F /* PrologueView.swift */,
 				0371480827B25F900038C28F /* Position.swift */,
 				0371480527B25F850038C28F /* Tile.swift */,
 				037147FF27B25F380038C28F /* Row.swift */,
 				037147F627B25EA30038C28F /* GameView.swift */,
 				03A12CB027AF47F20090C2E8 /* TicTacTofuApp.swift */,
-				03A12CB127AF47F20090C2E8 /* ContentView.swift */,
 				0371481727B25FDD0038C28F /* GameState.swift */,
 				0371481427B25FD00038C28F /* GameOutcome.swift */,
 				0371481127B25FBF0038C28F /* Move.swift */,
 				0371480E27B25FB20038C28F /* GamePlayer.swift */,
 				0371480B27B25F9F0038C28F /* Player.swift */,
 				0371480227B25F4C0038C28F /* Board.swift */,
-				037147FC27B25EE70038C28F /* PrologueView.swift */,
 				037147F927B25ECA0038C28F /* OptionsView.swift */,
 				037147F327B25E5A0038C28F /* TileView.swift */,
 				037147F027B25E480038C28F /* PlayerImage.swift */,
